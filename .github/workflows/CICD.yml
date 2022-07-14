@@ -18,4 +18,5 @@ jobs:
 
       - name: run BuildKit
         run: |
-          ls
+          cd bulletin-board
+          buildctl build --frontend=gateway.v0  --opt source=kiamol/buildkit-buildpacks--local context=src --output type=image,name=kiamol/ch11-bulletin-board:buildkit
